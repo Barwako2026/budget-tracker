@@ -1,83 +1,168 @@
-h1 {
-  color: darkblue;
+/* ===== Base / Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9f7;
+  color: #2b2b2b;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #2f6f4f;
+}
+
+/* ===== Page Header Card ===== */
+.page-header {
+  background-color: #ffffff;
   text-align: center;
+  padding: 25px;
+  margin: 0 auto 20px auto;
+  max-width: 700px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
 }
 
+.page-header h1 {
+  margin: 10px 0 5px 0;
+}
+
+.page-header p {
+  color: #555;
+  margin: 0;
+}
+
+/* ===== Add Expense Card ===== */
 #add-expense {
-  background-color: #eef6ff;
-  padding: 15px;
-  margin: 20px;
-  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
 }
 
-#expense-list {
-  background-color: #f4f4f4;
-  padding: 15px;
-  margin: 20px;
-  border-radius: 8px;
-}
-
-/* Table styling */
-table {
-  border-collapse: collapse;
+/* Direct child selector */
+#add-expense > form > input,
+#add-expense > form > select {
+  display: block;
   width: 100%;
-  margin-top: 15px;
-}
-
-th, td {
-  border: 1px solid #ccc;
+  margin-bottom: 12px;
   padding: 10px;
-  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
 }
 
-thead {
-  background-color: #4a90e2;
-  color: white;
+/* Negation pseudo-class */
+input:not([type="number"]) {
+  border-left: 3px solid #3a7d44;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #e6e6e6;
-}
-
-/* Hover effect on table rows */
-tbody tr:hover {
-  background-color: #d0eaff;
+/* Focus state */
+input:focus, select:focus {
+  outline: 2px solid #3a7d44;
+  outline-offset: 2px;
+  border-color: #3a7d44;
 }
 
 /* Button styling */
 button {
   cursor: pointer;
-  margin-top: 10px;
-  padding: 8px 16px;
-}
-
-/* Advanced selectors */
-
-/* Descendant selector */
-#expense-list td {
+  background-color: #3a7d44;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 14px;
 }
 
-/* Direct child selector */
-#add-expense > input {
-  display: block;
-  margin-bottom: 10px;
-  padding: 6px;
-  width: 200px;
+button:hover {
+  background-color: #2f6f4f;
+}
+
+/* ===== Expense List Card ===== */
+#expense-list {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+/* ===== Table Styling ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #3a7d44;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Descendant selector */
+#expense-list td {
+  color: #333;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+  background-color: #f0f5f0;
 }
 
 /* Pseudo-class based on position */
 tbody tr:first-child {
-  font-weight: bold;
+  font-weight: 600;
 }
 
-/* Negation pseudo-class */
-input:not([type="number"]) {
-  border: 1px solid #999;
+/* Hover effect on table rows */
+tbody tr:hover {
+  background-color: #e0f0e5;
 }
 
-/* Focus state */
-input:focus, select:focus {
-  outline: 2px solid #4a90e2;
+/* ===== Details / Summary ===== */
+details {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f7f9f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
 
-  
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2f6f4f;
+}
+
+/* ===== Video Section ===== */
+h3 {
+  margin-top: 20px;
+}
+
+iframe {
+  border-radius: 8px;
+  margin-top: 10px;
+  max-width: 100%;
+}
