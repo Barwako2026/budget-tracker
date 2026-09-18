@@ -1,3 +1,83 @@
-h1 { color: darkblue; text-align: center; }
-#add-expense { background-color: #eef6ff; padding: 15px; margin: 20px; border-radius: 8px; }
-#expense-list { background-color: #f4f4f4; padding: 15px; margin: 20px; border-radius: 8px; }
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+#add-expense {
+  background-color: #eef6ff;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+#expense-list {
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background-color: #4a90e2;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+  background-color: #d0eaff;
+}
+
+/* Button styling */
+button {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 8px 16px;
+}
+
+/* Advanced selectors */
+
+/* Descendant selector */
+#expense-list td {
+  font-size: 14px;
+}
+
+/* Direct child selector */
+#add-expense > input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 6px;
+  width: 200px;
+}
+
+/* Pseudo-class based on position */
+tbody tr:first-child {
+  font-weight: bold;
+}
+
+/* Negation pseudo-class */
+input:not([type="number"]) {
+  border: 1px solid #999;
+}
+
+/* Focus state */
+input:focus, select:focus {
+  outline: 2px solid #4a90e2;
+
+  
