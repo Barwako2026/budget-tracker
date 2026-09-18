@@ -2,90 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Budget Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpendWise Dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header class="page-header">
-    <img src="https://cdn-icons-png.flaticon.com/512/2830/2830284.png" alt="Budget Tracker logo" width="50">
-    <h1>My Budget Tracker</h1>
-    <p>Track your income and expenses in one place.</p>
-  </header>
+  <div class="dashboard">
 
-  <section id="add-expense">
-    <h2>Add Expense</h2>
-    <form>
-      <input type="text" id="expense-name" placeholder="Expense name">
-      <input type="number" id="expense-amount" placeholder="Amount">
-      <select id="expense-category">
-        <option value="food">Food</option>
-        <option value="transport">Transport</option>
-        <option value="rent">Rent</option>
-        <option value="entertainment">Entertainment</option>
-        <option value="other">Other</option>
-      </select>
-      <button type="button">Add Expense</button>
-    </form>
-  </section>
+    <aside class="sidebar">
+      <h2 class="logo">SpendWise</h2>
+      <nav class="nav-menu">
+        <a href="#" class="nav-item active">Dashboard</a>
+        <a href="#" class="nav-item">Expenses</a>
+        <a href="#" class="nav-item">Income</a>
+        <a href="#" class="nav-item">Reports</a>
+        <a href="#" class="nav-item">Settings</a>
+      </nav>
+    </aside>
 
-  <section id="expense-list">
-    <h2>Your Expenses</h2>
+    <header class="header">
+      <h1>Welcome back, Barwako</h1>
+      <div class="header-actions">
+        <span class="header-date">September 2026</span>
+        <button class="header-btn">+ Add Expense</button>
+      </div>
+    </header>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Amount</th>
-          <th>Category</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Groceries</td>
-          <td>$45.00</td>
-          <td>Food</td>
-          <td>2026-09-01</td>
-        </tr>
-        <tr>
-          <td>Bus Fare</td>
-          <td>$5.00</td>
-          <td>Transport</td>
-          <td>2026-09-03</td>
-        </tr>
-        <tr>
-          <td>Rent</td>
-          <td>$400.00</td>
-          <td>Rent</td>
-          <td>2026-09-05</td>
-        </tr>
-        <tr>
-          <td>Movie Night</td>
-          <td>$20.00</td>
-          <td>Entertainment</td>
-          <td>2026-09-08</td>
-        </tr>
-        <tr>
-          <td>Phone Bill</td>
-          <td>$15.00</td>
-          <td>Other</td>
-          <td>2026-09-10</td>
-        </tr>
-      </tbody>
-    </table>
+    <main class="cards-grid">
 
-    <details>
-      <summary>How to use this tracker</summary>
-      <p>Fill in the expense name, amount, and category in the form above, then click "Add Expense" to record it. Your expenses will appear in the table above.</p>
-    </details>
+      <div class="card" tabindex="0">
+        <h3>Food</h3>
+        <p class="amount">$245.00</p>
+        <p class="sub-text">This month</p>
+      </div>
 
-    <h3>Budgeting Tip Video</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/HQzoZfc3GwQ" title="Budgeting Tips" frameborder="0"></iframe>
+      <div class="card" tabindex="0">
+        <h3>Transport</h3>
+        <p class="amount">$120.00</p>
+        <p class="sub-text">This month</p>
+      </div>
 
-  </section>
+      <div class="card" tabindex="0">
+        <h3>Rent</h3>
+        <p class="amount">$800.00</p>
+        <p class="sub-text">This month</p>
+      </div>
+
+      <div class="card" tabindex="0">
+        <h3>Entertainment</h3>
+        <p class="amount">$60.00</p>
+        <p class="sub-text">This month</p>
+      </div>
+
+      <div class="card" tabindex="0">
+        <h3>Savings</h3>
+        <p class="amount">$300.00</p>
+        <p class="sub-text">This month</p>
+      </div>
+
+      <div class="card" tabindex="0">
+        <h3>Utilities</h3>
+        <p class="amount">$95.00</p>
+        <p class="sub-text">This month</p>
+      </div>
+
+    </main>
+
+  </div>
 
 </body>
 </html>
