@@ -1,50 +1,30 @@
-# My Budget Tracker
+# SpendWise Dashboard
 
-A simple front-end budget tracking web page built with HTML and CSS. This project is being developed incrementally week by week as part of a coding course, starting from a basic layout and progressively adding structure, styling, and interactivity.
+A responsive budget tracking dashboard built with HTML, CSS, and JavaScript.
 
-## What's Built So Far
+## What SpendWise does
 
-### Structure & Layout
-- A header section with a logo image and page title.
-- An "Add Expense" form section for entering new expenses.
-- An "Expenses" section displaying existing expenses in a table.
+SpendWise is a budget tracking web app. It displays spending categories on a dashboard, and now uses JavaScript to collect a user's budget and an expense amount, calculate the remaining balance and percentage spent, and log the results to the browser console.
 
-### Expense Table
-- Built using semantic HTML: `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, and `<td>`.
-- Column headers: Name, Amount, Category, Date.
-- Pre-filled with 5 sample expense rows (hardcoded data — no JavaScript yet).
-- Styled with `border-collapse: collapse`, padded cells, a colored header row, and alternating row background colors for readability.
+## JavaScript concepts implemented
 
-### Add Expense Form
-- Wrapped in a proper `<form>` element.
-- Text input for expense name (`#expense-name`) and number input for amount (`#expense-amount`).
-- A `<select>` dropdown for category (`#expense-category`) with 5 options: Food, Transport, Rent, Entertainment, Other.
-- A `<button type="button">` labeled "Add Expense" — not yet functional; JavaScript logic will be added in a later week.
-- All inputs have matching `id` attributes so they can be targeted by JavaScript in the future.
+- **Variables:** `let` variables store budgeting data such as the monthly budget, expense name, amount, category, and a boolean flag for whether a budget is set.
+- **User input:** `prompt()` is used to ask the user for their monthly budget and an expense amount. The returned text is converted to numbers using `Number()`.
+- **Calculations:** Two functions calculate the remaining balance (`budget - expense`) and the percentage of the budget spent (`(expense / budget) * 100`).
+- **Functions:** `calculateRemainingBalance()` and `calculateSpentPercentage()` are reusable functions that take budget and expense values as parameters and return a result, keeping the calculation logic organized and separate from the rest of the script.
+- **Output:** Results are printed to the browser console with `console.log()`, clearly labeled, along with a conditional message warning if the user has gone over budget.
 
-### Multimedia
-- A logo image near the main heading, using `<img>` with `src`, `alt`, and `width` attributes.
-- An embedded YouTube video (a budgeting tips video) using an `<iframe>` with `width`, `height`, `src`, `title`, and `frameborder` attributes.
+## Features
 
-### Interactive Elements
-- A collapsible `<details>`/`<summary>` section explaining how to use the tracker.
-- A `:hover` effect on table rows that highlights the row under the mouse.
-- `cursor: pointer` on the "Add Expense" button to indicate it's clickable.
-
-### CSS Selectors Used
-- **Descendant selector**: `#expense-list td` — styles table cell text size.
-- **Direct child selector**: `#add-expense > input` — styles only the direct input children of the form section.
-- **Positional pseudo-class**: `tbody tr:first-child` — bolds the first row of the table.
-- **Negation pseudo-class**: `input:not([type="number"])` — styles text inputs differently from number inputs.
-- **Focus state**: `input:focus, select:focus` — adds a visible outline when a form field is focused, for accessibility.
+- **Dashboard layout:** Sidebar navigation, header, and a grid of 6 category cards (Food, Transport, Rent, Entertainment, Savings, Utilities).
+- **CSS Grid & Flexbox:** CSS Grid handles the overall page layout. Flexbox arranges items inside the sidebar, header, and each card.
+- **CSS custom properties:** Colors are defined as variables in `:root` and reused throughout the stylesheet.
+- **Responsive design:** A media query collapses the layout into a single column below 768px.
+- **Micro-interactions:** Cards have a subtle lift and shadow animation on hover and keyboard focus.
+- **Dark theme (stretch goal):** Overrides CSS variables using `prefers-color-scheme: dark`.
 
 ## Files
-- `index.html` — page structure and content.
-- `style.css` — all styling and layout rules.
-- `README.md` — this file.
 
-## How to View
-Open `index.html` in any web browser. No build steps or dependencies required.
-
-## Coming Later
-- JavaScript functionality to actually add, calculate, and display expenses dynamically (planned for a future week).
+- `index.html` — page structure
+- `style.css` — styling, layout, and responsive rules
+- `script.js` — budgeting variables, user input, calculations, and console output
